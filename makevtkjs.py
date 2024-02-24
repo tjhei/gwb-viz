@@ -1,3 +1,4 @@
+import os
 #import paraview
 #paraview.compatibility.major = 5
 #paraview.compatibility.minor = 10
@@ -30,4 +31,5 @@ if len(sys.argv)<3:
 
 output_name = sys.argv[1]
 inputs = sys.argv[2:]
+os.remove(output_name)
 make_vtkjs(output_name, inputs)
